@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(15,23,42,0.8);
+    backdrop-filter: blur(10px);
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content h1 {
+    font-size: 48px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #38bdf8;
+    color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 10%;
+}
+
+.skills .progress {
+    background: #1e293b;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.skills span {
+    display: block;
+    height: 100%;
+    background: #38bdf8;
+    border-radius: 5px;
+}
+
+.project-card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #1e293b;
+    border: none;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
+}
+
+/* MOBILE */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
