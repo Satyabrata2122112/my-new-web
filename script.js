@@ -1,5 +1,11 @@
 // Typing Effect
-const textArray = ["Frontend Developer", "UI/UX Designer", "JavaScript Expert"];
+const textArray = [
+    "DevOps Engineer",
+    "Cloud Infrastructure Specialist",
+    "CI/CD Automation Expert",
+    "Kubernetes & Docker Enthusiast"
+];
+
 let typingElement = document.querySelector(".typing");
 let index = 0;
 let charIndex = 0;
@@ -35,4 +41,26 @@ const navbar = document.querySelector(".navbar");
 
 toggle.addEventListener("click", () => {
     navbar.classList.toggle("active");
+});
+
+// Scroll Reveal
+function reveal() {
+    document.querySelectorAll(".reveal").forEach(el => {
+        let windowHeight = window.innerHeight;
+        let elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+            el.classList.add("active");
+        }
+    });
+}
+window.addEventListener("scroll", reveal);
+
+// Animate Skill Bars
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".progress span").forEach(span => {
+        let position = span.getBoundingClientRect().top;
+        if (position < window.innerHeight - 50) {
+            span.style.width = span.getAttribute("data-width");
+        }
+    });
 });
